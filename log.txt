@@ -1,0 +1,58 @@
+*********************** Log Started 2020-03-15T23:22:15Z ***********************
+23:22:15:************************* Folding@home Client *************************
+23:22:15:    Website: https://foldingathome.org/
+23:22:15:  Copyright: (c) 2009-2018 foldingathome.org
+23:22:15:     Author: Joseph Coffland <joseph@cauldrondevelopment.com>
+23:22:15:       Args: 
+23:22:15:     Config: <none>
+23:22:15:******************************** Build ********************************
+23:22:15:    Version: 7.5.1
+23:22:15:       Date: May 11 2018
+23:22:15:       Time: 12:57:01
+23:22:15: Repository: Git
+23:22:15:   Revision: 4705bf53c635f88b8fe85af7675557e15d491ff0
+23:22:15:     Branch: master
+23:22:15:   Compiler: GNU 4.2.1 Compatible Apple LLVM 7.3.0 (clang-703.0.31)
+23:22:15:    Options: -std=gnu++98 -O3 -funroll-loops -mmacosx-version-min=10.6
+23:22:15:             -Wno-unused-local-typedefs
+23:22:15:   Platform: darwin 15.6.0
+23:22:15:       Bits: 64
+23:22:15:       Mode: Release
+23:22:15:******************************* System ********************************
+23:22:15:        CPU: Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+23:22:15:     CPU ID: GenuineIntel Family 6 Model 61 Stepping 4
+23:22:15:       CPUs: 4
+23:22:15:     Memory: 8.00GiB
+23:22:15:Free Memory: 131.34MiB
+23:22:15:    Threads: POSIX_THREADS
+23:22:15: OS Version: 10.14
+23:22:15:Has Battery: true
+23:22:15: On Battery: false
+23:22:15: UTC Offset: -4
+23:22:15:        PID: 15831
+23:22:15:        CWD: /Users/ethanzeigler/Programming/web/flask/ethanzeigler
+23:22:15:         OS: Darwin 18.7.0 x86_64
+23:22:15:    OS Arch: AMD64
+23:22:15:       GPUs: 0
+23:22:15:       CUDA: Not detected: Failed to open dynamic library 'libcuda.dylib':
+23:22:15:             dlopen(libcuda.dylib, 1): image not found
+23:22:15:     OpenCL: Not detected: Failed to open dynamic library 'libOpenCL.dylib':
+23:22:15:             dlopen(libOpenCL.dylib, 1): image not found
+23:22:15:***********************************************************************
+23:22:15:<config>
+23:22:15:  <!-- Folding Slots -->
+23:22:15:</config>
+23:22:15:Trying to access database...
+23:22:15:Successfully acquired database lock
+23:22:15:Enabled folding slot 00: PAUSED cpu:1 (not configured)
+[91m23:22:15:ERROR:Exception: Could not bind socket to 0.0.0.0:7396: Address already in use[0m
+[91m23:22:15:ERROR:Exception: Could not bind socket to 0.0.0.0:36330: Address already in use[0m
+23:22:48:Caught signal SIGINT(2) on PID 15831
+23:22:48:Exiting, please wait. . .
+23:22:49:Saving configuration to config.xml
+23:22:49:<config>
+23:22:49:  <!-- Folding Slots -->
+23:22:49:  <slot id='0' type='CPU'/>
+23:22:49:</config>
+23:22:49:Set client configured
+23:22:49:Clean exit

@@ -1,0 +1,46 @@
+.masthead-full {
+  min-height: 30rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/static/images/backgrounds/masthead.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px -10px 10px -10px  rgba(0, 0, 0, 0.6);
+  .attribution {
+    float: right;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    a {
+      font-size: 10pt;
+      color: $dirty-white;
+      text-decoration: none;
+    }
+  }
+  .navigation-links {
+    margin-top: 20vh;
+  }
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+    color: $title-color;
+    // text-shadow: 3px 6px 8px rgba(0,0,0,0.95);
+  }
+  h3 {
+    color: $title-color;
+    // text-shadow: 3px 4px 8px rgba(0,0,0,0.95);
+  }
+  @media (min-width: 500px) and (min-height: 650px) {
+    height: 100vh;
+    background-attachment: fixed;
+    h1 {
+      font-size: 7rem;
+    }
+  }
+}

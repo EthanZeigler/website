@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="mx-5">
+    <!--<div class="text-content text-justify">
+        <h1>Currently Inactive</h1>
+        PAWS Advisor is down for improvements
+    </div>-->
+
+    <div class="text-content text-justify">
+        <h1>PAWS Schedule Generator</h1>
+        PAWS is missing tons of things that should be standard in a course management, but by far
+        the worst is trying to figure out how to organize classes so they don't conflict. PAWS will
+        only tell you if an arrangement is okay or not, but what it really needs is to tell you what
+        arrangements are <i>possible</i>. Advisor takes your PAWS shopping cart and tell you what classes
+        will go together.<br>
+        <br>
+
+	<h4>Known issues</h4>
+	<ul>
+		<li>Sections without listed times cause things to act a little bit weird.</li>
+		<li>
+			PAWS is copying with extra spaces this year. Check your paste to make
+			sure random extra lines aren't showing up between pieces of the
+			course. (If unit is missing, that stays blank)
+		</li>
+	</ul>d
+
+        <h3>How to use</h3>
+	    First, go to the PAWS shopping cart page before you continue...<br><br>
+            Windows: press <b>CONTROL+A</b> (highlighting the entire page) then <b>CONTROL+C</b> (to copy it).
+            Right click on the text box below and choose <b>paste</b> <br>
+        <br>
+        macOS: press <b>⌘+A</b> (highlighting the entire page) then <b>⌘+C</b> (to copy it). Paste into the text box below.
+    </div>
+    <div class="form-group">
+        <label for="paste_field"></label>ww
+        <textarea class="form-control" rows="5" id="paste_field"></textarea>
+    </div>
+    <div>
+        <button type="button" class="btn btn-success mr-3" onclick="queryserver()">Submit</button>
+        <select id="course_amt">
+            <option value="3">3 Courses</option>
+            <option value="4" selected="selected">4 Courses</option>
+            <option value="5">5 Courses</option>
+            <option value="6">6 Courses</option>
+        </select> 
+    </div><br>
+    <div id="server_status"></div>
+    <div class="response" id="response-card">
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">Result</h5>
+                <p class="card-text" id="card-content">You shouldn't be able to see this...</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
