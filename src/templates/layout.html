@@ -1,0 +1,103 @@
+{% set active_page = active_page|default("home") %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- TODO: Add comfortaa font -->
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{% block title %}Ethan Zeigler{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <link rel="icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}">
+
+  {% block css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" integrity="sha256-7O1DfUu4pybYI7uAATw34eDrgQaWGOfMV/8erfDQz/Q=" crossorigin="anonymous" />
+    {% assets "scss_core" %}<link rel=stylesheet type=text/css href="{{ ASSET_URL }}">{% endassets %}
+  {% endblock %}
+</head>
+
+<body>
+  {% block navigation %}
+    <div class="mb-1">
+      <nav class="navbar navbar-dark navbar-expand-md bg-primary">
+        <a class="ml-3 py-0 navbar-brand" href="{{ url_for('home') }}">
+          <img src="{{ url_for('static', filename='images/icons/logo.svg') }}" width=50px>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbarColor01" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home') }}">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.ethanzeigler.com">Blog </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ 'active' if active_page == 'advisor' }}" href="">Advisor </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://resume.creddle.io/resume/140ckly496">Resume </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {{ 'active' if active_page == 'about' }}" href="{{ url_for('about') }}">About </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  {% endblock navigation %}
+  
+  {% block content %}{% endblock content %}
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <hr>
+      <ul class="list-inline mb-2">
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="">
+            <i class="icon-social-linkedin"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white mr-3" href="mailto:ethanzeigler@gmail.com">
+            <i class="icon-envelope-letter"></i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="social-link rounded-circle text-white" href="https://github.com/EthanZeigler">
+            <i class="icon-social-github"></i>
+          </a>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0 mx-2 d-inline">&copy; Ethan Zeigler</p>
+      <p class="text-muted small mb-0 mx-2 d-inline">Logo &copy; Jill Marbach</p>
+    </div>
+  </footer>
+
+  {% block modal %}{% endblock modal %}
+
+  <!-- Le javascript -->
+  {% block javascript %}
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- My stuff -->
+    {% assets "js_core" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+  {% endblock javascript %}
+</body>
+</html>

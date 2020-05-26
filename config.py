@@ -1,0 +1,5 @@
+DEBUG = False
+SQLALCHEMY_ECHO = False
+
+BCRYPT_LOG_ROUNDS = 12
+MAIL_FROM_EMAIL = "robert@example.com"

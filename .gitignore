@@ -1,0 +1,5 @@
+/instance/
+/node_modules/
+/log.txt
+/.vscode
+/**/__pycache__
